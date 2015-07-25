@@ -1,7 +1,4 @@
 (function() {
-  recipeer.controller('titlesCtrl', function($scope) {
-    $scope.main = 'Recipeer';
-    return $scope.home = 'Home';
-  });
+  recipeer.controller('miscCtrl', function($scope) {});
 
 }).call(this);

@@ -1,17 +1,24 @@
-recipeer.controller('apiCtrl', ($scope, $http) ->
-	$http.get 'https://api.yummly.com/v1/api/recipes?_app_id=9c953c03&_app_key=71d46663793f28c4477818649e4e6a40&q=bakes+salmon'
-	.success((data) ->
-		$scope.recipe = data
+recipeer.controller('apiCtrl', ($scope, sharedData) ->
+	$scope.primaryOptions = ['Beef', 'Chicken', 'Fish', 'Cheese', 'Eggs']
+	$scope.secondaryOptions = ['Lettuce', 'Beans', 'Carrots', 'Tomatoes', 'Mushrooms', 'Onions', 'Potatoes', 'Pasta', 'Rice', 'Turnips', 'Cabbage', 'Pumpkin', 'Shrimp']
+	$scope.terciaryOptions = ['Salt', 'Pepper', 'Spices']
+	params = []
+	URL = 'http://api.yummly.com/v1/api/recipes?_app_id=9c953c03&_app_key=71d46663793f28c4477818649e4e6a40&q='
+
+	$(document).on('click', '.base_food', ->
+		$param = $(this).html()
+		$(this).toggleClass('green-button')
+		params.push($param)
+		console.log params
+	)
+
+	$(document).on('click', '.next', ->
+		for byte in params
+			byte = byte + '+'
+			console.log byte
+			URL += byte
+		console.log URL
+		sharedData.recieveCallInfo(URL)
+		console.log 'pushed next'
 	)
 )
-
-class Recipe
-	constructor: (attributes={}) ->
-		@username = attributes.login
-
-class Ingredients
-	constructor: (attributes={}) ->
-
-	@domCaching: ->
-
-	@sendIngredients: ->

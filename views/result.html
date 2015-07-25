@@ -1,0 +1,14 @@
+<div class="six columns actions">
+	<p class="mini">RECIPEER</p>
+	<div class="row" ng-repeat='recipe in recipes'>
+		<div class="recipe">
+			<div class="six columns">
+				<img ng-src="{{recipe.imageUrlsBySize[350]}}" alt="">
+			</div>
+			<div class="six columns">
+				<h5>Name: {{recipe.recipeName}}</h5>
+				<p>Prep time: {{recipe.totalTimeInSeconds}}</p>
+			</div>
+		</div>
+	</div>
+</div>

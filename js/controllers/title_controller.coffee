@@ -1,4 +1,2 @@
-recipeer.controller('titlesCtrl', ($scope) -> 
-	$scope.main = 'Recipeer'
-	$scope.home = 'Home'
-	)
+recipeer.controller('miscCtrl', ($scope) -> 
+)

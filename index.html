@@ -5,17 +5,25 @@
 	<title>Recipeer</title>
 	<link rel="stylesheet" href="bower_components/skeleton-css/css/skeleton.css">
 	<link rel="stylesheet" href="dist/css/style.css">
+	<link rel="stylesheet" href="bower_components/animate.css/animate.css">
 </head>
 <body ng-app='Recipeer'>
 
+	<div class="six columns bg-dish">
+		<img src="assets/icons/recipee-logotype.png" alt="" class="logo-type">
+	</div>
+
 	<div ng-view></div>
-	
+
 	<script src='bower_components/jquery/dist/jquery.js'></script>
 	<script src='bower_components/angular/angular.js'></script>
 	<script src='bower_components/angular-route/angular-route.js'></script>
 	<script src='dist/js/app.js'></script>
+	<script src='dist/js/services/shared_data.js'></script>
+	<script src='dist/js/controllers/title_controller.js'></script>
 	<script src='dist/js/controllers/title_controller.js'></script>
 	<script src='dist/js/controllers/api_controller.js'></script>
+	<script src='dist/js/controllers/results_controller.js'></script>
 	<script src='dist/js/routes/routes.js'></script>
 </body>
 </html>

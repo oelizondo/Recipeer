@@ -1,2 +1,18 @@
-<p>{{test}}</p>
-<p>{{recipe}}</p>
+<div class="six columns actions">
+	<p class="mini">RECIPEER</p>
+	<div class="row basics" id="basics">
+		<h3 class="options">Basics</h3>
+		<button ng-repeat='option in primaryOptions' class="base_food">{{option}}</button>
+	</div>
+	<div class="row basics">
+		<h3 class="options">Complementary</h3>
+		<button ng-repeat='option in secondaryOptions' class="base_food">{{option}}</button>
+	</div>
+	<div class="row basics">
+		<h3 class="options">Extras</h3>
+		<button ng-repeat='option in terciaryOptions' class="base_food">{{option}}</button>
+	</div>
+	<div class="row">
+		<button class="next"><a href="/#/result">Feed me!</a></button>
+	</div>
+</div>

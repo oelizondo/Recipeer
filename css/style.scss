@@ -1,12 +1,155 @@
+@import 'mixins';
+$title-font-size: 60px;
 $base-font-size: 14px;
 $base-color: #171716;
+$base-letter-spacing: 2px;
 
-body {
-	padding: 0;
-	margin: 0;
+@font-face{
+	font-family: Grotesque;
+	src: url('/assets/fonts/Brandon_med.otf')
 }
 
-.landing {
-	display: flex;
+body {
+	margin: 0;
+	font-family: Grotesque;
+}
+.green-button {
+	background: #5FE15B;
+	color: white;
+	transition: 0.2s;
+}
+
+.landing-button {
+	background: #5FE15B;
+	color: white;
+	transition: 0.2s;
+	border: 0px;
+	-webkit-border-radius: 20px;
+		border-radius: 20px;
+	display: inline-block;
+	margin: 5px 15px;
+	color: white;
+	&:hover {
+		opacity: 0.8;
+	}
+
+}
+
+.landing-link {
+	color: white;
+	text-decoration: none;
+	&:hover {
+		color: white;
+	}
+}
+
+.logo-type {
+	margin: 30px;
+	height: 85px;
+	width: 85px;
+	border-radius:50%;    
+    -webkit-transition: -webkit-transform .7s ease-in-out;
+    -ms-transition: -ms-transform .7s ease-in-out;
+    transition: transform .7s ease-in-out;    
+	&:hover {
+		 transform:rotate(360deg);
+	    -ms-transform:rotate(360deg);
+	    -webkit-transform:rotate(360deg);
+	}
+}
+
+.mini {
+	margin: 30px;
+	height: 15px;
+	font-size: 10px;
+	text-align: right;
+	letter-spacing: 4px;
+}
+
+.bg-dish {
+	position: fixed;
 	height: 100vh;
+	margin-right: 50px;
+	background-image: url('/assets/images/img-1.png');
+	@include background-size;
+	background-repeat: no-repeat;
+}
+.landing {
+	position: relative;
+	left: 50%;
+	height: 100vh;
+	letter-spacing: $base-letter-spacing;
+
+	.title {
+		letter-spacing: $base-letter-spacing;
+		font-size: $title-font-size;
+		text-align: left;
+		margin-top: 170px;
+	}
+	
+	.landing-description {
+		margin: 30px 0;
+		max-width: 400px;
+		opacity: 0.5;
+		font-size: 10px;
+	}
+
+	.green-button {
+		border: 0px;
+		height: 45px;
+		color: white;
+		background-color: #5FE15B;
+		-webkit-border-radius: 20px;
+		        border-radius: 20px;
+		margin: 30px 0;
+	}
+}
+
+.actions {
+	position: relative;
+	left: 50%;
+	overflow-y: hidden;
+	.options {
+		font-size: 15px;
+		letter-spacing: $base-letter-spacing;
+	}
+	.basics {
+		margin-bottom: 25px;
+		height: auto;
+			margin-top: 25px;
+			margin-bottom: 0;
+			button {
+				border: 0px;
+				-webkit-border-radius: 20px;
+					border-radius: 20px;
+				background: #CCC;
+				display: inline-block;
+				margin: 5px 15px;
+				color: white;	
+			
+			&:hover {
+				background: #5FE15B;
+				color: white;
+				transition: 0.2s;
+			}
+		}
+	}
+	.next {
+		border: 0px;
+		-webkit-border-radius: 20px;
+			border-radius: 20px;
+		background: #5FE15B;
+		display: inline-block;
+		margin: 0 auto;
+		color: white;
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}
+
+.recipe {
+	height: auto;
+	max-width: 500px;
 }
