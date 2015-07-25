@@ -7,7 +7,7 @@ recipeer.controller('apiCtrl', ($scope, $route, sharedData) ->
 
 	$(document).on('click', '.base_food', ->
 		$param = $(this).html()
-		$(this).toggleClass('green-button')
+		$(this).toggleClass('landing-button')
 		params.push($param)
 		console.log params
 	)
