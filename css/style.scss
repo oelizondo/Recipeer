@@ -28,8 +28,12 @@ body {
 		border-radius: 20px;
 	display: inline-block;
 	margin: 5px 15px;
-	color: white;
+	a {
+		color: #FFF;
+		text-decoration: none;
+	}
 	&:hover {
+		color: white;
 		opacity: 0.8;
 	}
 
@@ -140,7 +144,9 @@ body {
 			border-radius: 20px;
 		background: #5FE15B;
 		display: inline-block;
-		margin: 0 auto;
+		margin-left: 240px;
+		margin-top: 30px;
+		margin-bottom: 30px;
 		color: white;
 		a {
 			color: inherit;
@@ -150,6 +156,39 @@ body {
 }
 
 .recipe {
-	height: auto;
-	max-width: 500px;
+	img {
+		width: 100%;
+		height: auto;
+	}
+	.recipe-info {
+		ul {
+			list-style: none;
+			li {
+				display: inline-block;
+			}
+		}
+		#recipe-id {
+			display: none;
+		}
+	}
+}
+
+.single-show {
+	font-size: 12px;
+	.back-button {
+		border: 0px;
+		height: 40px;
+		color: white;
+		background-color: #5FE15B;
+		-webkit-border-radius: 20px;
+		        border-radius: 20px;
+		a {
+			color: #FFF;
+			text-decoration: none;
+		}
+		&:hover {
+			transition: 0.2s;
+			opacity: 0.8;
+		}
+	}
 }

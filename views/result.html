@@ -1,14 +1,14 @@
 <div class="six columns actions">
 	<p class="mini">RECIPEER</p>
-	<div class="row" ng-repeat='recipe in recipes'>
-		<div class="recipe">
-			<div class="six columns">
-				<img ng-src="{{recipe.imageUrlsBySize[350]}}" alt="">
-			</div>
-			<div class="six columns">
-				<h5>Name: {{recipe.recipeName}}</h5>
-				<p>Prep time: {{recipe.totalTimeInSeconds}}</p>
-			</div>
+	<div class="row recipe" ng-repeat='recipe in recipes'>
+		<div class="four columns">
+			<img ng-src="{{recipe.imageUrlsBySize[350]}}" alt="">
+		</div>			
+		<div class="eight columns recipe-info">
+			<p><strong>{{recipe.recipeName}}</strong></p>
+			<p>{{recipe.totalTimeInSeconds / 60 }} minutes</p>
+			<p id="recipe-id" class="recipe-id">{{recipe.id}}</p>
+			<button class="landing-button" id='cook'><a href="/#/recipe">Let's cook</a></button>
 		</div>
 	</div>
 </div>

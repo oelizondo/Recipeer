@@ -12,5 +12,9 @@ recipeer.config(($routeProvider) ->
 		templateUrl: 'views/result.html',
 		controller: 'resultsCtrl'
 	}
+	.when '/recipe', {
+		templateUrl: 'views/show.html',
+		controller: 'individualRecipeCtrl'
+	}
 	.otherwise '/'
 )

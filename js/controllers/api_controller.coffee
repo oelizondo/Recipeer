@@ -1,7 +1,7 @@
-recipeer.controller('apiCtrl', ($scope, sharedData) ->
+recipeer.controller('apiCtrl', ($scope, $route, sharedData) ->
 	$scope.primaryOptions = ['Beef', 'Chicken', 'Fish', 'Cheese', 'Eggs']
-	$scope.secondaryOptions = ['Lettuce', 'Beans', 'Carrots', 'Tomatoes', 'Mushrooms', 'Onions', 'Potatoes', 'Pasta', 'Rice', 'Turnips', 'Cabbage', 'Pumpkin', 'Shrimp']
-	$scope.terciaryOptions = ['Salt', 'Pepper', 'Spices']
+	$scope.secondaryOptions = ['Lettuce', 'Beans', 'Carrots', 'Tomatoes', 'Mushrooms', 'Onions', 'Potatoes', 'Pasta', 'Rice', 'Turnips', 'Cabbage', 'Pumpkin', 'Shrimp', 'Bread', 'Corn']
+	$scope.terciaryOptions = ['Salt', 'Pepper', 'Spices', 'Garlic', 'Butter', 'Salsa', 'Cilantro', 'Seasoning']
 	params = []
 	URL = 'http://api.yummly.com/v1/api/recipes?_app_id=9c953c03&_app_key=71d46663793f28c4477818649e4e6a40&q='
 
@@ -15,10 +15,7 @@ recipeer.controller('apiCtrl', ($scope, sharedData) ->
 	$(document).on('click', '.next', ->
 		for byte in params
 			byte = byte + '+'
-			console.log byte
 			URL += byte
-		console.log URL
 		sharedData.recieveCallInfo(URL)
-		console.log 'pushed next'
 	)
 )
